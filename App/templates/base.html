@@ -1,0 +1,17 @@
+{% extends 'bootstrap/base.html'%}
+
+<title>{% block title %}{% endblock %}</title>
+
+<!-- Styles block -->
+
+{% block styles%}
+    {{ super() }}
+    <link href="{{url_for('static',filename='images/favicon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.css')}}">
+{% endblock %}
+
+<!-- Navbar block  --> 
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
