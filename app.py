@@ -1,4 +1,9 @@
 from flask import Flask
+from main import main_blueprint
 
-app = Flask(__name__) #Instance of class Flask
+def create_app():
+    app = Flask(__name__) #Instance of class Flask
+    app.register_blueprint(main_blueprint)
 
+
+    return app
